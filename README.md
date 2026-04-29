@@ -1,15 +1,16 @@
 # Alert Manager
 
-Gerenciador de alertas via:
+Gerenciador de envio de alertas através dos seguintes canais:
 
 - Email
 - Slack
 - SMS
+- Telegram
 
-## Pré-requisitos
+## Pré-requisitos:
 - Go
 
-## Como utilizar
+## Como utilizar:
 ```sh
 go run main.go
 ```

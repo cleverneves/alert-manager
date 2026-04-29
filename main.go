@@ -2,6 +2,7 @@ package main
 
 import (
 	"alertmanager/email"
+	"alertmanager/slack"
 )
 
 func main() {
@@ -12,4 +13,6 @@ func main() {
 	emailTemplate := "./email/template.html"
 
 	email.SendMail([]string{"clever.nvs@gmail.com"}, subject, server, errorMessage, time, emailTemplate)
+
+	slack.SendMessage(subject)
 }
