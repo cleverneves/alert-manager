@@ -3,16 +3,22 @@ package main
 import (
 	"alertmanager/email"
 	"alertmanager/slack"
+	"alertmanager/sms"
 )
 
 func main() {
-	subject := "Alerta de Servidor down"
-	server := "Google"
-	errorMessage := "Erro ao conectar o servidor."
-	time := "29/04/2026"
-	emailTemplate := "./email/template.html"
+	// subject := "Alerta de Servidor down"
+	// server := "Google"
+	// errorMessage := "Erro ao conectar o servidor."
+	// time := "29/04/2026"
+	// emailTemplate := "./email/template.html"
 
-	email.SendMail([]string{"clever.nvs@gmail.com"}, subject, server, errorMessage, time, emailTemplate)
+	// email.SendMail([]string{"clever.nvs@gmail.com"}, subject, server, errorMessage, time, emailTemplate)
 
-	slack.SendMessage(subject)
+	// message := "Alerta de Servidor down"
+	// slack.SendMessage(message)
+
+	message := "Alerta de Servidor down"
+	phone := "55991999999"
+	sms.SendMessage(message, phone)
 }
